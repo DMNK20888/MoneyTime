@@ -1,8 +1,71 @@
-.App {
-  text-align: center;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-.App-logo {
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+main {
+  /* height: 8000px;
+  width: 100vw; */
+    /*display:flex;
+    justify-content: center;*/
+}
+
+body {
+  
+  width: 100%;
+  /* max-width: 2000px; */
+  font-family: Open sans, sans-serif, Helvetica;
+  align-content: center;
+  justify-content: center;
+  margin:auto;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,22 +74,587 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+}; */
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0C2D48;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+/*********** Navigation and Footer ***********/
+.banner {
+  height: 60px;
+  width: 100vw;
+  background-color: #0C2D48;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
 }
+
+.bannerFooter {
+  height: 220px;
+  width: 100vw;
+  color: white;
+  background-color: #0C2D48;
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+
+websitetitle { /* Title in the Nav bar */
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  padding-left: 5%; 
+  padding-bottom:0px;
+  /* color: white; */
+  display: flex;
+  align-items: center;
+}
+
+.dropbtn {
+  font: bold;
+  /* background-color: #04AA6D; */
+  background-color:  #0C2D48;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 13px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:#3d4e6e;}
+
+.navigation {
+  width: 20%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*********** Navigation and Footer END ***********/
+
+/*********** MISC ***********/
+
+h2 {
+  /* padding-left: 5%;  */
+  padding-bottom:0px;
+  margin: 0px;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  padding-top:0px;
+  margin: 0px;
+  padding-left: 22%;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.BackgroundHome {
+  background-color: green;
+  height: 10px;
+}
+
+/* Background image of the city for the home page */
+.BackgroundImg {
+  background-image: url(./img/WebsiteBackgroundHome.jpeg);
+  background-size: cover;
+  height: 100vh;
+}
+
+/*********** MISC END ***********/
+
+/*********** PieChart ***********/
+
+.pie-chart {  /* pie chart container */
+  color:black;
+}
+
+.piechart {
+  padding:10px;
+  margin: 10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.dot1 {
+  height: 15px;
+  width: 15px;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 0px;
+  padding: 0px;
+  background-color: #003f5c;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot2 {
+  height: 15px;
+  width: 15px;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 0px;
+  padding: 0px;
+  background-color: #ffa600;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot3 {
+  height: 15px;
+  width: 15px;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 0px;
+  padding: 0px;
+  background-color: #bc5090;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#circle {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  
+}
+
+.circleText {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 0px;
+}
+
+/*********** PieChart END ***********/
+
+/*********** BarChart ***********/
+
+#d3demo {  /* bar chart container */
+  height: 310px;
+  /* width: 700px; */
+  width: 700px;
+  margin: 0px;
+  padding: 30px;
+  padding-left:0px;
+  display: flexbox;
+  justify-content: center;
+  align-content: center;
+}
+
+/* #barChartSVG {
+  width: 900px;
+} */
+
+/*********** BarChart END ***********/
+
+/* #barChart {
+  margin: 5px;
+  padding:20px; 
+} */
+
+/* ******************************************************** */
+
+
+
+/* Take A took at this *********************************** */
+
+
+/* ******************************************************** */
+
+/*********** CompoundAdditions Mortgage ***********/
+/* input fields */
+.inputSpan {
+  font-size: 16px;
+  color: white;
+  padding: 4px 4px  6px  5px;
+  background-color: #0C2D48;
+  border-color: black;
+  border: 8px;
+  border-right: 0;
+  border-radius: 4px 0px 0px 4px; 
+}
+
+#test { /* span css */
+  border-radius: 0px 4px 4px 0px; 
+  width: 130px;
+}
+
+#amount { 
+  border-radius: 0px 4px 4px 0px;
+  width: 130px;
+}
+
+#return {
+  border-radius: 4px 0px 0px 4px;
+  width: 122px;
+  padding-left: 6px;
+}
+
+#addition { 
+  border-radius: 0px 4px 4px 0px;
+  width: 130px;
+}
+
+#years {
+  border-radius: 4px 4px 4px 4px;
+  padding-left: 6px;
+  width: 144.16px;
+}
+
+#price { 
+  border-radius: 0px 4px 4px 0px;
+  width: 130px;
+}
+
+#downpayment { /* span css */
+  width: 130px;
+}
+
+#rate {
+  border-radius: 4px 0px 0px 4px;
+  width: 122px;
+  padding-left: 6px;
+}
+
+#tax {
+  border-radius: 0px 4px 4px 0px;
+  width: 130px;
+}
+
+#compoundBox {
+  /* padding-top: 85px; */
+  /* margin-top:85px; */
+}
+
+
+.inputBox {
+  background-color: white;
+  /* background-color:  #0C2D48; */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+#homebox {
+  background-color:  #0C2D48;
+  /* background-color:  #FFFFFF; */
+  /* background-color: red; */
+  height:1000px;
+  /* background-color: white; */
+  background-image: url("img/WebsiteBackgroundHome.jpeg");
+}
+
+#homeTitle {
+  padding-left: 22%;
+  color: white;
+}
+
+#content {
+  margin-top: 100px;
+  /* background-color: white; */
+  color: white;
+  background-color:  #0C2D48;
+  opacity: 0.95;
+}
+
+.homeimage {
+  /* margin-top: 85px; */
+  background-image: url("img/WebsiteBackgroundHome.jpeg");
+  height: 100%;
+
+  /* background-size: "cover"; */
+  object-fit: cover;
+}
+
+.inputContainer {
+  padding: 10px;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+}
+
+.textInput {
+  color: white;
+  width: 150px;
+  height: 30px;
+  border-radius: 0px 4px 4px 0px;
+  /* background-color: rgb(27, 39, 102); */
+  background-color: #0C2D48;
+  transition: 0.4s all;
+  border: none;
+  appearance: none;
+  outline: none;
+}
+
+.textInput:hover {
+  color:black;
+  transition: 0.4s all;
+  background-color: rgb(256, 256, 256);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.textInput:hover::placeholder {
+  transition: 0.4s;
+  color:rgb(49, 49, 49);
+}
+
+.textInput::placeholder {
+  color:white;
+}
+
+.myInput {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#homeInputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#HomeButtonContainers {
+  display: flex;
+  flex-direction: column;
+/* \justify-content: center; */
+  align-content: center;
+  /* justify-content: center; */
+  padding:22px;
+}
+
+label {
+  color: black;
+  font-size: 20;
+}
+
+#inputLabel {
+  font-size: 18;
+}
+
+
+/* End of input fields */
+
+.extraInfo {
+  background-color: white;
+  padding: 50px;
+  /* padding-top: 30px; */
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+}
+
+.graphContainer {
+  /* background-color: white; */
+  padding: 20px;
+  /* margin: 10px; */
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; /* changed this */
+  justify-content: center;
+}
+
+.graphBox {
+  background-color: white;
+  color: black;
+  margin: 45px;
+  margin-top: 30px;
+  padding: 20px;
+  height: 480px;
+  /* width: 600px; */
+  border-radius: 4px;
+  border-style: solid;
+  border: 5px;
+  border-color: black;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+#infoBox {
+  width: 300px;
+  min-width: 290px;
+  max-width: 350px;
+}
+
+#pieBox {
+  width: 300px;
+}
+
+#barBox {
+  width: 600px;
+}
+
+#map {
+  width: 100%;
+  margin: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: grey;
+} 
+
+.resultBox {
+  color: black;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p#answer {
+  padding: 0px;
+  margin: 5px;
+  color: #023faf; /*  #145DA0 */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p#answerText {
+  padding:0px;
+  margin: 0px;
+  /* display:flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+#submit {
+  color: #0C2D48;
+  height: 20px;
+  padding-top: 41px;
+  padding-left: 10px;
+  background-color: transparent;
+  font-weight:bolder;
+  border:none;
+}
+
+#submit:hover {
+  color: #0764bb;
+}
+
+/*********** CompoundAdditions Mortgage END ***********/
+
+p#infoHeader {
+  padding: 0px;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  /* display: flex;
+  justify-content: center; */
+}
+
+
+
+.bar-chart {
+  background-color: grey;
+}
+
+.tooltip {
+  background-color: red;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ******************************************************** */
+
+/* Home SignUP */
+a.signup {
+  width: 130px;
+  height: 45px;
+  line-height: 33px;
+  
+  display:inline-block;
+  /* padding:0.35em 1.2em; */
+  padding:0.25em;
+  border:0.1em solid #FFFFFF;
+  /* border:0.1em solid #000000; */
+  /* margin:0 0.3em 0.3em 0; */
+  /* margin: 7px; */
+  margin-top: 0px;
+  margin-bottom: 15px;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Helvetica',sans-serif;
+  font-weight:bolder;
+  font-size: 18px;
+  color:#FFFFFF;
+  /* color:#000000; */
+  text-align:center;
+  transition: all 0.2s;
+  }
+  a.signup:hover {
+  color:#000000;
+  /* color:#FFFFFF; */
+  background-color:#FFFFFF;
+  /* background-color:#000000; */
+  }
+
+  a.signup .signin {
+    width: 50px;
+    height:30px;
+  }
+
+  #componentTitle {
+    padding-left: 22%;
+  }
+
+  #additionTitle {
+    display: flex;
+    flex-direction: column;
+  }
+
+/* Home SignUP END */
+
 
 @keyframes App-logo-spin {
   from {
@@ -35,4 +663,204 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media only screen and (max-width: 877px) {
+  /* .banner {
+    height: 60px;
+    background-color: #1d2942;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  } */
+
+  .graphContainer {
+    /* background-color: white; */
+    padding: 15px;
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap; /* changed this */
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .inputContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  } */
+
+  /* .myInput {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #submit {
+    color: #0C2D48;
+    height: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: transparent;
+    font-weight:bolder;
+    border:none;
+  } */
+
+  .graphBox {
+    background-color: white;
+    color: black;
+    margin: 45px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 3px;
+    height: 460px;
+    width: 250px;
+  }
+
+  #infoBox {
+    width: 300px;
+  }
+  
+  #pieBox {
+    width: 300px;
+  }
+  
+  #barBox {
+    width: 300px;
+  }
+
+  #map {
+    width: 90%;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: grey;
+  } 
+
+  #d3demo {  /* bar chart container */
+    height: 310px;
+    /* width: 700px; */
+    width: 410px;
+    margin: 0px;
+    padding: 10px;
+    padding-left:0px;
+    display: flexbox;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /* #home {
+    height: 800px;
+    background-color: chocolate;
+    color:darkgreen;
+  } */
+
+  .inputBox {
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #homebox {
+    background-color:  #0C2D48;
+    height:1000px;
+  }
+
+  #background {
+    background-color:  #0C2D48;
+    color: red;
+  }
+
+
+  .homeImage {
+    /* height: 810px; */
+    background-image: url("img/WebsiteBackgroundHome.jpeg");
+    height: 100%;
+    /* background-size: "cover"; */
+    object-fit: cover;
+  } 
+
+  body {
+    width: 100%;
+    font-family: Open sans, sans-serif, Helvetica;
+    align-content: center;
+    justify-content: center;
+    /* margin:auto; */
+  }
+
+  /* #componentTitle {
+    padding-left: 0%;
+    display: flex;
+    justify-content: center;
+  } */
+
+
+}
+
+@media only screen and (max-width: 1500px) {
+  
+  .graphContainer {
+    /* background-color: white; */
+    padding: 15px;
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    /* flex-direction: column;  */
+    flex-wrap: wrap; /* changed this */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .inputContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .myInput {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #submit {
+    color: #0C2D48;
+    height: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: transparent;
+    font-weight:bolder;
+    border:none;
+  }
+
+  .inputBox {
+    
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #componentTitle {
+    padding-left: 0%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+
 }
