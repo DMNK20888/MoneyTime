@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import './index.css';
+//import './index.css';
 import Navigationbar from './Navigation/Navigation.jsx';
 import Footer from './Navigation/Footer.jsx';
 //import CompoundCalculator from "./Components/CompoundCalculator.jsx";
