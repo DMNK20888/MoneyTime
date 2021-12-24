@@ -17,7 +17,7 @@ app.listen(PORT, () => {
 
 //Have NODE serve the files for our built React app
 //app.use(express.static(path.resolve(__dirname, '../client/public'))); //could be build
-app.use('/static', express.static(path.join(__dirname, '../client/public')));
+app.use(express.static(path.join(__dirname, '../client/public')));
 
 
 
