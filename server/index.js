@@ -19,7 +19,8 @@ app.listen(PORT, () => {
 //app.use(express.static(path.resolve(__dirname, '../client/public'))); //could be build
 
 //app.use(express.static(path.join(__dirname, "../client/public")));
-app.use('/static', express.static(path.join(__dirname, 'client/build')));
+//app.use('/static', express.static(path.join(__dirname, 'client/build')));
+app.use('/static', express.static(path.join(__dirname, 'client/public')));
 
 //app.use(express.static(path.join(__dirname, '../client/public')));
 //app.use('/static', express.static(path.join(__dirname, '../client/public')));
@@ -32,7 +33,8 @@ app.use('/static', express.static(path.join(__dirname, 'client/build')));
 
 //All other GET requests not handled before will return our React app
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html')); //changed this from ... to ..
+    //res.sendFile(path.resolve(__dirname, '../client/build', 'index.html')); //changed this from ... to ..
+    res.sendFile(path.resolve(__dirname, '../client/public', 'index.html'));
 });
 
 
