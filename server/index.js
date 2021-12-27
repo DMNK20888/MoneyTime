@@ -33,10 +33,10 @@ app.use('/static', express.static(path.join(__dirname, 'client/build')));
 
 //All other GET requests not handled before will return our React app
 app.get('*', (req, res) => {
-    //res.sendFile(path.resolve(__dirname, '../client/build', 'index.html')); //changed this from ... to ..
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html')); //changed this from ... to ..
     //res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
     
-    res.sendFile('../client/build/index.html', {root: __dirname});
+    //res.sendFile('../client/build/index.html', {root: __dirname});
     
     //console.log(res.sendFile(path.resolve(__dirname, '../client/public', 'index.html')));
 });
