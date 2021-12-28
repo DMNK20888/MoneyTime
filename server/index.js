@@ -46,10 +46,15 @@ app.use('/static', express.static(path.join(__dirname, 'client/public')))
 app.get('*', (req, res) => {
     //res.sendFile(path.resolve(__dirname, '../client/build', 'index.html')); //changed this from ... to ..
 
+    res.sendFile('../client/public/index.html', {root: path.dirname(__dirname)});
+
+    //res.sendFile(path.resolve(__dirname, '../client/public', 'index.html'));
+
+
     //res.sendFile(path.resolve(__dirname, '../client/public', 'index.html'));
     //res.sendFile(path.resolve(__dirname, 'client/public', 'index.html'));
     //res.sendFile(path.resolve(__dirname, '../client/public', 'index.html'));
-    res.sendFile('../client/public/index.html', {root: __dirname});
+    //res.sendFile('../client/public/index.html', {root: __dirname});
 
 
     //res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
