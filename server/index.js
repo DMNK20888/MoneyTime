@@ -23,7 +23,7 @@ app.listen(PORT, () => {
 
 //app.use('/static', express.static(path.join(__dirname, 'client/build')));
 //app.use('/static', express.static(path.join(__dirname, 'client/public')));
-app.use('/static', express.static(path.join(__dirname, 'client/public')))
+app.use('/static', express.static(path.join(__dirname, '../client/public'))) //just added the ../
 
 
 //two ideas
